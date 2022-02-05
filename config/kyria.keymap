@@ -17,7 +17,12 @@
 #define NUM 5
 #define FUN 6
 
+&sk {
+	release-after-ms = <2000>;
+};
+
 / {
+
 	combos {
 		compatible = "zmk,combos";
 		combo_med {
