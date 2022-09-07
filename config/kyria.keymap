@@ -25,8 +25,10 @@
 			compatible = "zmk,behavior-hold-tap";
 			label = "MODTAP_SHORT";
 			#binding-cells = <2>;
-			tapping-term-ms = <150>;
-			flavor = "tap-preferred";
+			tapping-term-ms = <500>;
+			flavor = "balanced";
+			quick-tap-ms = <150>;
+			global-quick-tap;
 			bindings = <&kp>, <&kp>;
 		};
 
@@ -34,8 +36,10 @@
 			compatible = "zmk,behavior-hold-tap";
 			label = "MODTAP_LONG";
 			#binding-cells = <2>;
-			tapping-term-ms = <350>;
-			flavor = "tap-preferred";
+			tapping-term-ms = <500>;
+			flavor = "balanced";
+			quick-tap-ms = <150>;
+			global-quick-tap;
 			bindings = <&kp>, <&kp>;
 		};
 
@@ -43,8 +47,10 @@
 			compatible = "zmk,behavior-hold-tap";
 			label = "LAYERTAP_SHORT";
 			#binding-cells = <2>;
-			tapping-term-ms = <150>;
-			flavor = "tap-preferred";
+			tapping-term-ms = <500>;
+			flavor = "balanced";
+			quick-tap-ms = <150>;
+			global-quick-tap;
 			bindings = <&mo>, <&kp>;
 		};
 
@@ -52,9 +58,35 @@
 			compatible = "zmk,behavior-hold-tap";
 			label = "LAYERTAP_MEDIUM";
 			#binding-cells = <2>;
-			tapping-term-ms = <175>;
-			flavor = "tap-preferred";
+			tapping-term-ms = <500>;
+			flavor = "balanced";
+			quick-tap-ms = <150>;
+			global-quick-tap;
 			bindings = <&mo>, <&kp>;
+		};
+
+		skq: sticky_quick_release {
+			compatible = "zmk,behavior-sticky-key";
+			label = "STICKY_QUICK_RELEASE";
+			#binding-cells = <1>;
+			bindings = <&kp>;
+			release-after-ms = <1000>;
+			quick-release;
+		};
+	};
+
+	combos {
+		compatible = "zmk,combos";
+		combo_sticky_space {
+			timeout-ms = <50>;
+			key-positions = <30 43>;
+			bindings = <&skq LSHIFT>;
+		};
+
+		combo_caps_word {
+			timeout-ms = <50>;
+			key-positions = <31 44>;
+			bindings = <&caps_word>;
 		};
 	};
 
