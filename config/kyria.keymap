@@ -90,7 +90,7 @@
 &none           &kp Q           &kp W           &kp E           &kp R           &kp T                                                                                &kp Y           &kp U           &kp I           &kp O           &kp P           &none
 &none           &kp A           &kp S           &mt LCTL D      &mt LSHFT F     &kp G                                                                                &kp H           &mt LSHFT J     &mt LCTL K      &kp L           &kp SQT         &none
 &tog GAME       &kp Z           &kp X           &mt LGUI C      &mt LALT V      &kp B            &none           &none               &none           &none           &kp N           &mt LALT M      &mt LGUI COMMA  &kp DOT    &kp FSLH        &none
-                                                &none           &kp RALT        &lt MED ESC      &lt NAV SPACE   &lt MOU TAB         &lt SYM RET     &lt NUM BSPC    &lt FUN DEL     &none           &none
+                                                &kp RALT        &kp ESC         &lt_sk MED LSHFT &lt NAV SPACE   &lt MOU TAB         &lt SYM RET     &lt NUM BSPC    &lt_cw FUN 1    &kp DEL         &kp RALT
 			>;
 		};
 
